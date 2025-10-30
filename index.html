@@ -1,97 +1,86 @@
-   <!DOCTYPE html>
+  
+	<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio de Obra</title>
-
-    <!-- Fuente de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Enlace al CSS -->
-    <link rel="stylesheet" href="assets/css/estilo.css">
+    <title>Luciano Construcciones | Calidad y Compromiso</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <a href="#">
-                <img src="assets/img/logo.png" alt="Logo del estudio" class="logo-header">
-            </a>
-            <ul>
-                <li><a href="#bienvenida">Inicio</a></li>
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <a href="#bienvenida">
+            <img src="assets/img/logo.png" alt="Logo Luciano Construcciones" class="logo-header">
+        </a>
+        
+        <ul>
+            <li><a href="#bienvenida">Inicio</a></li> 
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#servicios">Especialidades</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
+<main>
+    
+    <section id="bienvenida">
+        <h2>Bienvenido. Su obra, mi compromiso.</h2>
+        <p>En esta página encontrará una galería con una muestra de mis trabajos realizados, mi total compromiso con la calidad y los resultados que puede esperar en su proyecto.</p>
+        <p style="font-style: italic; color: var(--dorado);">Garantizo servicios de excelencia, presupuestos claros y atención personalizada. **Consulte sin compromiso.**</p>
+    </section>
 
-        <!-- Bienvenida -->
-        <section id="bienvenida">
-            <h2>Bienvenidos</h2>
-            <p>
-                En Estudio de Obra nos especializamos en el desarrollo y gestión de proyectos artísticos y arquitectónicos.  
-                Nuestro compromiso es transformar ideas en realidades con estética, técnica y precisión.
-            </p>
-        </section>
+    <section id="perfil">
+        <h2>Perfil Profesional</h2>
+        <p>Albañil con más de 10 años de experiencia en construcción, refacciones y mantenimiento de hogares. Trabajo con responsabilidad, cumplo tiempos de entrega y ofrezco soluciones personalizadas para cada cliente.</p>
+    </section>
 
-        <!-- Perfil -->
-        <section id="perfil">
-            <h2>Perfil</h2>
-            <p>
-                Contamos con un equipo multidisciplinario de profesionales con experiencia en diseño, planificación y ejecución de obras.
-                Nuestra filosofía se basa en la innovación, el respeto por el entorno y la excelencia en cada detalle.
-            </p>
-        </section>
+    <section id="servicios">
+        <h2>Especialidades</h2>
+        <div class="servicios">
+            <div class="servicio">Revoque fino y grueso</div>
+            <div class="servicio">Colocación de cerámicos y porcelanato</div>
+            <div class="servicio">Construcción en seco (Durlock)</div>
+            <div class="servicio">Estructuras pequeñas y lozas</div>
+            <div class="servicio">Reparaciones de humedad y terminaciones</div>
+        </div>
+    </section>
 
-        <!-- Servicios -->
-        <section id="servicios">
-            <h2>Servicios</h2>
-            <div class="servicios">
-                <div class="servicio">Diseño Arquitectónico</div>
-                <div class="servicio">Dirección de Obra</div>
-                <div class="servicio">Renderizado 3D</div>
-                <div class="servicio">Presupuestos y Planificación</div>
-            </div>
-        </section>
+    <section id="galeria">
+        <h2>Galería de Trabajos</h2>
+        <p class="centrado">Una imagen vale más que mil palabras. Vea algunos de nuestros proyectos.</p>
+        <div class="contenedor-galeria">
+            <div class="card"><img src="assets/img/obra-1.jpg" alt="Obra de mampostería y estructura terminada"></div>
+            <div class="card"><img src="assets/img/obra-2.jpg" alt="Colocación de cerámicos en piso de cocina"></div>
+            <div class="card"><img src="assets/img/obra-3.jpg" alt="Detalle de revoque fino exterior"></div>
+            <div class="card"><img src="assets/img/obra-4.jpg" alt="Instalación de placa de Durlock"></div>
+        </div>
+    </section>
 
-        <!-- Galería -->
-        <section id="galeria">
-            <h2>Galería</h2>
-            <div class="contenedor-galeria">
-                <div class="card"><img src="assets/img/galeria1.jpg" alt="Proyecto 1"></div>
-                <div class="card"><img src="assets/img/galeria2.jpg" alt="Proyecto 2"></div>
-                <div class="card"><img src="assets/img/galeria3.jpg" alt="Proyecto 3"></div>
-                <div class="card"><img src="assets/img/galeria4.jpg" alt="Proyecto 4"></div>
-            </div>
-        </section>
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>Zona de trabajo: Villa Hernandarias y alrededores.</p>
+        <p>Teléfono: **54 9 343492568**</p>
+        
+        <a class="btn-whatsapp" 
+           href="https://wa.link/f9n3r9/3434682568?text=Hola%2C%20quisiera%20solicitar%20un%20presupuesto%20para%20un%20trabajo%20de%20alba%C3%B1iler%C3%ADa.%20Gracias."
+           target="_blank">¡Pedir Presupuesto por WhatsApp!</a>
+        
+        <p class="email-info">También puedes escribirnos a: lucianobarrios1632@gmail.com</p>
+    </section>
+</main>
 
-        <!-- Contacto -->
-        <section id="contacto">
-            <div class="contacto">
-                <h2>Contacto</h2>
-                <p>Comunicate con nosotros para consultas, presupuestos o colaboraciones.</p>
-                <p class="email-info">estudioobra@example.com</p>
-                <a href="https://wa.me/5491123456789" class="btn-whatsapp" target="_blank">WhatsApp</a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Estudio de Obra — Todos los derechos reservados.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Albañil Profesional Luciano Barrios. Desarrollado por [Melanie Abigail Sogaray]</p>
+</footer>
 
 </body>
 </html>
-
 
 
 
