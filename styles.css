@@ -1,249 +1,145 @@
-  /* --- PALETA TIPO "ESTUDIO DE OBRA" --- */
-/* Negro elegante + dorado ladrillo + marrón cemento suave */
-
-:root {
-    --fondo-principal: #1a1a1a;
-    --fondo-card: #222;
-    --dorado: #c49a6c;
-    --dorado-hover: #d6b57b;
-    --texto-claro: #f5f5f5;
-    --gris-suave: #b8b8b8;
+/* --- ESTILOS BASE --- */
+body { 
+    margin: 0; 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    color: #333; 
+    /* FONDO CÁLIDO PROFESIONAL: Beige muy claro */
+    background-color: #f9f3e7; 
 }
 
-/* --- ESTILOS GENERALES --- */
-
-body {
-    margin: 0;
-    font-family: 'Poppins', 'Montserrat', sans-serif;
-    background: url('assets/img/fondo-textura.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--texto-claro);
-    line-height: 1.6;
+/* --- ESTILOS DE LECTURA (SECCIONES) --- */
+section { 
+    padding: 40px 20px; 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    scroll-margin-top: 100px;
+    background-color: transparent; /* Fondo transparente para dejar ver el fondo del body */
+    border-radius: 8px; 
+    box-shadow: none; 
 }
 
-/* --- NAVBAR --- */
-header {
-    background-color: rgba(0, 0, 0, 0.85);
-    border-bottom: 2px solid var(--dorado);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo-header {
-    width: 125px; /* agrandado */
-    height: auto; /* mantiene proporción natural */
-    object-fit: contain;
-    border: none; /* sin borde dorado */
-    border-radius: 0; /* sin forma redonda */
-    transition: transform 0.3s ease;
-}
-
-
-.logo-header:hover {
-    transform: scale(2.05);
-}
-
-/* Menú */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
-    color: var(--texto-claro);
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--dorado);
-}
-
-/* --- SECCIONES --- */
-main {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-section {
-    padding: 50px 20px;
+h2 {
     text-align: center;
+    color: #0d47a1; 
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+.centrado {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-section h2 {
-    color: var(--dorado);
-    border-bottom: 1px solid var(--dorado);
-    display: inline-block;
-    margin-bottom: 25px;
-    font-size: 1.8em;
-    text-transform: uppercase;
+/* --- ESTILOS DEL ENCABEZADO (HEADER) Y NAVEGACIÓN --- */
+header { 
+    background: #222; 
+    color: #fff; 
+    padding: 15px 20px; 
+    text-align: center; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+header h1 { 
+    margin: 0; 
+    font-size: 32px; 
+}
+header p { 
+    margin: 5px 0 10px; 
+    font-size: 16px; 
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffd700; 
 }
 
-/* --- PERFIL --- */
-#perfil {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: rgba(34, 34, 34, 0.75);
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(196, 154, 108, 0.25);
-    padding: 25px;
+/* --- ESTILOS DE SERVICIOS --- */
+.servicios { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
 }
-
-#perfil p {
-    color: var(--gris-suave);
-    font-size: 1.1em;
-    line-height: 1.7;
+.servicio { 
+    background: #fff; 
+    padding: 25px; 
+    border-radius: 8px; 
+    text-align: center; 
+    box-shadow: 0 2px 8px rgba(0,0,0,.1); 
+    border-bottom: 4px solid #0d47a1; 
+    font-weight: 500;
+    transition: transform 0.3s;
 }
-
-/* --- SERVICIOS --- */
-.servicios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.servicio {
-    background-color: rgba(34, 34, 34, 0.8);
-    color: var(--texto-claro);
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid rgba(196, 154, 108, 0.2);
-    transition: all 0.3s ease;
-}
-
 .servicio:hover {
-    transform: translateY(-4px);
-    background-color: rgba(196, 154, 108, 0.15);
-    border-color: var(--dorado);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,.15);
 }
 
-/* --- GALERÍA --- */
-.contenedor-galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
+/* --- ESTILOS DE GALERÍA --- */
+.galeria { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+.galeria img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card {
-    background-color: rgba(34, 34, 34, 0.7);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* --- ESTILOS DE CONTACTO --- */
+.contacto { 
+    text-align: center; 
 }
-
-.card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(196, 154, 108, 0.5);
-}
-
-.card img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-}
-
-.card p {
-    color: var(--gris-suave);
-    padding: 10px;
-    font-size: 1em;
-}
-
-/* --- CONTACTO --- */
-.contacto {
-    background-color: rgba(34, 34, 34, 0.85);
-    color: var(--texto-claro);
-    padding: 40px;
-    border-radius: 15px;
-    max-width: 600px;
-    margin: 40px auto;
-    box-shadow: 0 0 15px rgba(196, 154, 108, 0.3);
-    text-align: center;
-}
-
-.contacto h2 {
-    color: var(--dorado);
-}
-
-.contacto p {
-    color: var(--gris-suave);
-    margin-bottom: 12px;
-    font-size: 1.05em;
-}
-
-.btn-whatsapp {
-    display: inline-block;
-    background-color: #25d366;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
+.btn-whatsapp { 
+    display: inline-block; 
+    padding: 15px 30px; 
+    background: #25d366; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 50px; 
+    font-weight: bold; 
+    font-size: 1.1em;
     margin-top: 15px;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
 }
-
 .btn-whatsapp:hover {
-    background-color: #1ebe57;
+    background: #128c7e; 
 }
-
 .email-info {
-    color: var(--gris-suave);
+    margin-top: 20px;
     font-style: italic;
+    color: #555;
 }
 
-/* --- FOOTER --- */
+/* --- ESTILOS DE PIE DE PÁGINA (FOOTER) --- */
 footer {
+    /* Fondo cálido más oscuro para contraste */
+    background: #d4a373; 
+    color: #fff;
     text-align: center;
-    padding: 25px;
-    color: var(--gris-suave);
+    padding: 20px 0;
     font-size: 0.9em;
-    border-top: 1px solid rgba(196, 154, 108, 0.3);
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* --- RESPONSIVE --- */
+/* --- MEDIA QUERIES (Responsiveness para móviles) --- */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
+    section {
+        padding: 30px 15px;
+        margin: 20px auto;
     }
-
-    .logo-header {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 10px;
+    nav a {
+        display: block; 
+        margin: 5px 10px;
     }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .contenedor-galeria img {
+    .galeria img {
         height: 180px;
-    }
-
-    #perfil, .contacto {
-        padding: 20px;
     }
 }
