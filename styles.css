@@ -1,3 +1,5 @@
+
+	
 /* --- PALETA TIPO "ESTUDIO DE OBRA" --- */
 /* Negro elegante + dorado ladrillo + marrón cemento suave */
 
@@ -14,8 +16,10 @@
 
 body {
     margin: 0;
+    /* Usar la fuente Poppins de Google Fonts */
     font-family: 'Poppins', 'Montserrat', sans-serif;
-    background: url('../img/fondo-textura.jpg') no-repeat center center fixed;
+    /* Fondo de Textura: Asegúrate que 'fondo-textura.jpg' exista en assets/img/ */
+    background: url('assets/img/fondo-textura.jpg') no-repeat center center fixed;
     background-size: cover;
     color: var(--texto-claro);
     line-height: 1.6;
@@ -23,6 +27,7 @@ body {
 
 /* --- NAVBAR --- */
 header {
+    /* Fondo semitransparente oscuro para que el fondo de textura se vea por detrás */
     background-color: rgba(0, 0, 0, 0.85);
     border-bottom: 2px solid var(--dorado);
     padding: 10px 20px;
@@ -40,14 +45,15 @@ nav {
 }
 
 .logo-header {
-    width: 60px;
-    height: auto;
+    width: 60px; /* Tamaño del logo */
+    height: auto; 
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
+
 .logo-header:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
 }
 
 /* Menú */
@@ -73,6 +79,7 @@ nav ul li a:hover {
 
 /* --- SECCIONES --- */
 main {
+    /* Fondo de MAIN para darle un filtro al fondo de textura */
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -89,7 +96,7 @@ section h2 {
     font-size: 1.8em;
     text-transform: uppercase;
 }
-
+/* Estilo para el texto de contacto en la sección de Bienvenida */
 #bienvenida p {
     color: var(--gris-suave);
     max-width: 900px;
@@ -100,6 +107,7 @@ section h2 {
 #perfil {
     max-width: 700px;
     margin: 40px auto;
+    /* Fondo oscuro semitransparente para que el texto resalte */
     background-color: rgba(34, 34, 34, 0.75);
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(196, 154, 108, 0.25);
@@ -164,6 +172,7 @@ section h2 {
     height: 230px;
     object-fit: cover;
 }
+
 
 /* --- CONTACTO --- */
 .contacto {
